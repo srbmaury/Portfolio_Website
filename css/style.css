@@ -4,12 +4,13 @@
 }
 body{
     overflow-x: hidden;
+    background-color: white;
 }
 .display-photo{
     display:flex;
     margin: auto;
     justify-content: center;
-    border:2px solid black;
+    border:5px solid black;
     width:250px;
     height:250px;
     border-radius: 125px;
@@ -135,6 +136,9 @@ img.projects{
         margin-left:2vmin !important;
         width:90% !important;
     }
+    #light-dark-mode{
+        visibility: hidden;
+    }
 }
 
 /* width */
@@ -155,4 +159,47 @@ img.projects{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+#color{
+    width:20vmax;
+    height:3vmax;
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 60vw;
+    z-index:100;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    border: 1px solid black;
+    visibility: hidden;
+}
+
+#paint-brush{
+    width:20px;
+    height:20px;
+    position: absolute;
+    margin-top: -5vh;
+    margin-left: 60vw;
+    z-index:100;
+    cursor:pointer;
+    display: flex;
+}
+.colorRepresentation{
+    cursor: pointer;
+    width:28px;
+    height:28px;
+    border-radius: 14px;
+    border:1px solid black;
+    margin-left: 1.2vw;
+    margin-top:1vh;
+}
+
+#light-dark-mode{
+    margin-top: 1vh;
+    margin-left: 82vw;
+    position: fixed;
+    float:right;
+    width:5vmin;
+    cursor:pointer;
 }

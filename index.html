@@ -31,14 +31,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#otherWorks">Other Works</a>
                     </li>
+                        <img id="light-dark-mode" src="static/darkmode.png" alt="dark-mode" onclick = "darkmode()">
                 </ul>
             </div>
         </div>
     </nav>
+    
+    <span id="color">
+        <span class = "colorRepresentation" onclick = "changeColor('red');"></span>
+        <span class = "colorRepresentation" onclick = "changeColor('black');"></span>
+        <span class = "colorRepresentation" onclick = "changeColor('blue');"></span>
+        <span class = "colorRepresentation" onclick = "changeColor('yellow');"></span>
+        <span class = "colorRepresentation" onclick = "changeColor('orange');"></span>
+        <span class = "colorRepresentation" onclick = "changeColor('pink');"></span>
+    </span>
     <img class = "display-photo" src = 'static/saurabh.maurya.ece20.png' alt = "saurabh.maurya.ece20.png" id="aboutMe">
+    <img id='paint-brush' src = 'static/paint-brush.png' alt='paint-brush' onclick = "changeVisibility();">
     <div id = "name"></div>
     <div id = "intro"></div>
-
 
 
     <div class = "tools-and-technologies" id = "toolsAndTech">Tools and Technologies:</div>
@@ -133,7 +143,7 @@
 
     <div class = "tools-and-technologies" style = "font-size:5vmin; margin-top:10vmin;" id = "otherWorks">My other works:</div>
 
-    <div class = "tools-and-technologies" style="cursor:pointer; font-size:5vmin; font-weight:420;">&bull; Poem <a href = "\static\Poem.pdf" target = "_new"><img style = "width:5vmin;" src = "static/pdf.png"></a></div>
+    <div class = "tools-and-technologies" style="cursor:pointer; font-size:5vmin; font-weight:420;">&bull; Poem <a href = "static/Poem.pdf" target = "_new"><img style = "width:5vmin;" src = "static/pdf.png"></a></div>
     <footer>
         <p class="text-footer" style="float:bottom;">
             Copyright &copy; 2022 - www.srbmaury.com - All rights reserved
