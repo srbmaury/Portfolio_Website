@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Website</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" id = "navBar">
+        <div class="container-fluid">
+            <span class="navbar-brand">Portfolio Website</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#aboutMe">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#toolsAndTech">Tools & technologies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myProjects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#connect">Connect</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#otherWorks">Other Works</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <img class = "display-photo" src = '/static/saurabh.maurya.ece20.png' alt = "saurabh.maurya.ece20.png" id="aboutMe">
+    <div id = "name"></div>
+    <div id = "intro"></div>
+
+
+
+    <div class = "tools-and-technologies" id = "toolsAndTech">Tools and Technologies:</div>
+    <div class = "web-technologies">
+        <img class = "tech" src="/static/HTML.png" alt="HTML">
+        <img class = "tech" src="/static/CSS.png" alt="CSS">
+        <img class = "tech" src="/static/JS.jpg" alt="JS">
+        <img class = "tech" src="/static/reactJS.png" alt="ReactJS">
+        <img class = "tech" src="/static/django.png" alt="django">
+    </div>
+
+    <div class = "tools-and-technologies" style = "margin-bottom:2vh;" id="myProjects">My Projects:</div>
+    <div class="row projects-row">
+        <div class="col-sm-3 project-items">
+            <div class="card">
+                <div class="card-body">
+                    <img class = "projects" src="/static/chatters.png" alt="chatters">
+                    <h5 class="card-title">Chatters</h5>
+                    <p class="card-text">A social site using django with user authentication and basic CRUD operations.</p>
+                    <a href="http://srbmaury.pythonanywhere.com/login/?next=/" class="btn btn-primary" target = "_new">Go to project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 project-items">
+            <div class="card">
+                <div class="card-body">
+                    <img class = "projects" src="/static/website.png" alt="website">
+                    <h5 class="card-title">Portfolio Website</h5>
+                    <p class="card-text">First website which I made using HTML, CSS and JS.</p>
+                    <a href="https://srbmaury.github.io/responsive_Website/" class="btn btn-primary" target = "_new">Go to project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 project-items">
+            <div class="card">
+                <div class="card-body">
+                    <img class = "projects" src="/static/tictactoe.png" alt="tictactoe">
+                    <h5 class="card-title">Tic Tac Toe</h5>
+                    <p class="card-text">A tic tac toe game with 1 player and 2 players mode.</p>
+                    <a href="https://srbmaury.github.io/tic-tac-toe/" class="btn btn-primary" target = "_new">Go to project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 project-items">
+            <div class="card">
+                <div class="card-body">
+                    <img class = "projects" src="/static/dictionary.png" alt="dictionary">
+                    <h5 class="card-title">Dictionary</h5>
+                    <p class="card-text">A english to hindi dictionary with 4306 words.</p>
+                    <a href="https://srbmaury.github.io/dictionary/" class="btn btn-primary" target = "_new">Go to project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 project-items">
+            <div class="card">
+                <div class="card-body">
+                    <img class = "projects" src="/static/quiz.png" alt="quiz">
+                    <h5 class="card-title">Quiz</h5>
+                    <p class="card-text">A simple 5 questions quiz to demonstrate JS functionalities.</p>
+                    <a href="https://srbmaury.github.io/quiz1/" class="btn btn-primary" target = "_new">Go to project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 project-items">
+            <div class="card">
+                <div class="card-body">
+                    <img class = "projects" src="/static/todoslist.png" alt="to-dos-list">
+                    <h5 class="card-title">To-do-list</h5>
+                    <p class="card-text">A simple to-do-list using plain javascript with add, edit and delete options.</p>
+                    <a href="https://srbmaury.github.io/To-dos-list/" class="btn btn-primary" target = "_new">Go to project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "tools-and-technologies" id = "connect">Connect me through:</div>
+    <section class="section contactsection">
+        <a href="https://www.instagram.com/srbmaury/" target="_new">
+        <div class="thumbnail2"><img src="static/instagram.jpg" alt="image not loaded" title="instagram"></div> </a>
+        <a href="https://m.facebook.com/profile.php?id=100057795465187" target="_new">
+        <div class="thumbnail2"><img src="static/facebook.jpg" alt="image not loaded" title="facebook"></div> </a>
+        <a href="mailto:saurabh.maurya.ece20@gmail.com">
+        <div class="thumbnail2"><img src="static/gmail.jpg" alt="image not loaded" title="e-mail"></div> </a>
+        <a href="https://www.linkedin.com/in/saurabh-maurya-39b04b205" target="_new">
+        <div class="thumbnail2"><img src="static/linkedin.jpg" alt="image not loaded" title="linkedin"></div> </a>
+        <a href="https://mobile.twitter.com/SrbMaury" target="_new">
+        <div class="thumbnail2"><img src="static/twitter.jpg" alt="image not loaded" title="twitter"></div> </a>
+        <a href="https://github.com/srbmaury" target="_new">
+        <div class="thumbnail2"><img src="static/github.jpg" alt="image not loaded" title="github"></div> </a>
+        </a>
+    </section>
+
+    <div class = "tools-and-technologies" style = "font-size:5vmin; margin-top:10vmin;" id = "otherWorks">My other works:</div>
+
+    <div class = "tools-and-technologies" style="cursor:pointer; font-size:5vmin; font-weight:420;">&bull; Poem <a href = "\static\Poem.pdf" target = "_new"><img style = "width:5vmin;" src = "/static/pdf.png"></a></div>
+    <footer>
+        <p class="text-footer" style="float:bottom;">
+            Copyright &copy; 2022 - www.srbmaury.com - All rights reserved
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
