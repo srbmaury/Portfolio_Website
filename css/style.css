@@ -14,9 +14,10 @@ body{
     width:250px;
     height:250px;
     border-radius: 125px;
-    margin-top:12vh;
 }
-
+#aboutMe{
+    padding-top:12vh;
+}
 #name{
     display:flex;
     margin:auto;
@@ -202,4 +203,13 @@ img.projects{
     float:right;
     width:5vmin;
     cursor:pointer;
+}
+
+.active{
+    border-top: 2px solid black;
+    margin-top: -2px;
+    padding-top: 5px;
+}
+.nav-item{
+    margin: 0 5px;
 }

@@ -10,6 +10,10 @@ var footer = document.getElementsByClassName("text-footer");
 var navBar = document.getElementById("navBar");
 var navitems = document.getElementsByClassName("nav-link");
 
+var hashList = ['#aboutMe', '#toolsAndTech', '#myProjects', '#connect', '#otherWorks'];
+var buttons = ["first", "second", "third", "fourth"];
+let ids = ['1','2','3','4','5','6'];
+
 typeWriter();
 
 function typeWriter() {
@@ -18,7 +22,6 @@ function typeWriter() {
         i++;
         setTimeout(typeWriter, speed);
     }
-
     else{
         Intro.innerHTML += txt2.charAt(i - txt.length);
         i++;
@@ -41,7 +44,7 @@ function changeVisibility(){
 }
 
 function changeColor(c){
-    document.getElementById("aboutMe").style.borderColor = c;
+    document.getElementById("profile_pic").style.borderColor = c;
 }
 
 function darkmode(){
@@ -68,4 +71,61 @@ function darkmode(){
             navitems[i].style.color = "black";
         document.querySelector(".navbar-brand").style.color = "black";
     }
+}
+
+function changeVis(id){
+    for(var i=0; i<ids.length; i++){
+        if(ids[i] === id){
+            document.getElementById(ids[i]).style.opacity = "1";
+        }else{
+            document.getElementById(ids[i]).style.opacity = "0.3";
+        }
+    }
+}
+
+function normalise(){
+    for(var i=0; i<ids.length; i++){
+        document.getElementById(ids[i]).style.opacity = "1";
+    }
+}
+
+$(document).ready(function () {
+  
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top-100
+        }, 20, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+
+    $(document).on("scroll", onScroll);
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#navbarNavDropdown a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos + 400 && refElement.position().top + refElement.height() > scrollPos + 400) {
+            $('#navbarNavDropdown ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
 }
