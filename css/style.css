@@ -6,9 +6,20 @@ body{
     overflow-x: hidden;
     background-color: white;
 }
+.nav-item{
+    margin: 0 5px;
+}
+#cover-photo{
+    margin-top: -11vh;
+    width:100vw;
+    height:30vh;
+    position: absolute;
+    z-index: -100;
+}
 .display-photo{
     display:flex;
     margin: auto;
+    z-index:100;
     justify-content: center;
     border:5px solid black;
     width:250px;
@@ -117,30 +128,6 @@ img.projects{
     align-items: center;
     bottom:0;
 }
-@media only screen and (max-width: 1200px){
-    .section{
-        height: fit-content;
-        display:flex;
-        align-items: unset;
-        flex-direction: column;
-        justify-content: center;
-        justify-content:end;
-        max-width: max-content;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        font-family: 'Ubuntu', sans-serif;
-    } 
-    .thumbnail2 img{
-        width:60vmin;
-    }
-    .projects-row{
-        margin-left:2vmin !important;
-        width:90% !important;
-    }
-    #light-dark-mode{
-        visibility: hidden;
-    }
-}
 
 /* width */
 ::-webkit-scrollbar {
@@ -210,6 +197,43 @@ img.projects{
     margin-top: -2px;
     padding-top: 5px;
 }
-.nav-item{
-    margin: 0 5px;
+@media only screen and (max-width: 1200px){
+    .section{
+        height: fit-content;
+        display:flex;
+        align-items: unset;
+        flex-direction: column;
+        justify-content: center;
+        justify-content:end;
+        max-width: max-content;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        font-family: 'Ubuntu', sans-serif;
+    } 
+    .thumbnail2 img{
+        width:60vmin;
+    }
+    .projects-row{
+        margin-left:2vmin !important;
+        width:90% !important;
+    }
+    #light-dark-mode{
+        visibility: hidden;
+    }
+    #paint-brush{
+        margin-left: 75vw;
+    }
+    #color{
+        padding:1px;
+        width:fit-content;
+        height:fit-content;
+        margin-left: 85vw;
+        display:block;
+    }
+    #color .colorRepresentation{
+        display: block;
+    }
+    #cover-photo{
+        visibility: hidden;
+    }
 }

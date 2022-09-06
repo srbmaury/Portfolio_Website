@@ -7,6 +7,11 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
   </head>
   <body id = "body">
     <nav class="navbar navbar-expand-lg fixed-top bg-light" id = "navBar">
@@ -21,16 +26,16 @@
                         <a class="nav-link active" aria-current="page" href="#aboutMe">About me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id = "first" href="#toolsAndTech">Tools & technologies</a>
+                        <a class="nav-link" href="#toolsAndTech">Tools & technologies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id = "second" href="#myProjects">Projects</a>
+                        <a class="nav-link" href="#myProjects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id = "third" href="#connect">Connect</a>
+                        <a class="nav-link" href="#connect">Connect</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id = "fourth" href="#otherWorks">Other Works</a>
+                        <a class="nav-link" href="#otherWorks">Other Works</a>
                     </li>
                         <img id="light-dark-mode" src="static/darkmode.png" alt="dark-mode" onclick = "darkmode()">
                 </ul>
@@ -48,6 +53,7 @@
             <span class = "colorRepresentation" onclick = "changeColor('orange');"></span>
             <span class = "colorRepresentation" onclick = "changeColor('pink');"></span>
         </span>
+        <!--<img id = "cover-photo" src = 'static/coverPhoto.png' alt = "coverPhoto.png" '></img>-->
         <img class = "display-photo" src = 'static/saurabh.maurya.ece20.png' alt = "saurabh.maurya.ece20.png" id="profile_pic">
         <img id='paint-brush' src = 'static/paint-brush.png' alt='paint-brush' onclick = "changeVisibility();">
         <div id = "name"></div>
@@ -160,6 +166,5 @@
         </p>
     </footer>
     <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -11,8 +11,8 @@ var navBar = document.getElementById("navBar");
 var navitems = document.getElementsByClassName("nav-link");
 
 var hashList = ['#aboutMe', '#toolsAndTech', '#myProjects', '#connect', '#otherWorks'];
-var buttons = ["first", "second", "third", "fourth"];
 let ids = ['1','2','3','4','5','6'];
+let changed = false;
 
 typeWriter();
 
@@ -48,7 +48,7 @@ function changeColor(c){
 }
 
 function darkmode(){
-    if(document.body.style.backgroundColor == "white"){
+    if(changed === false){
         document.body.style.backgroundColor = "#222";
         Name.style.color = "white";
         Intro.style.color = "white";
@@ -59,6 +59,7 @@ function darkmode(){
         for(var i=0; i<navitems.length; i++)
             navitems[i].style.color = "white";
         document.querySelector(".navbar-brand").style.color = "white";
+        changed = true;
     }else{
         document.body.style.backgroundColor = "white";
         Name.style.color = "black";
@@ -70,6 +71,7 @@ function darkmode(){
         for(var i=0; i<navitems.length; i++)
             navitems[i].style.color = "black";
         document.querySelector(".navbar-brand").style.color = "black";
+        changed = false;
     }
 }
 
