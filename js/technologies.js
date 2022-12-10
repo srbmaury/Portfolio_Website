@@ -1,0 +1,1 @@
+let technologies = ["HTML", "CSS", "JS", "reactJS", "django"];

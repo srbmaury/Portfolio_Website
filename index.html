@@ -1,170 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio Website</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
-    <link rel="manifest" href="/static/site.webmanifest">
-  </head>
-  <body id = "body">
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" id = "navBar">
-        <div class="container-fluid">
-            <span class="navbar-brand">Portfolio Website</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#aboutMe">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#toolsAndTech">Tools & technologies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#myProjects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#connect">Connect</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#otherWorks">Other Works</a>
-                    </li>
-                        <img id="light-dark-mode" src="static/darkmode.png" alt="dark-mode" onclick = "darkmode()">
-                </ul>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio Website</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+        <link rel="manifest" href="/static/site.webmanifest">
+    </head>
+
+    <body id = "body">
+        <nav class="navbar navbar-expand-lg fixed-top bg-light" id = "navBar">
+            <div class="container-fluid">
+                <span class="navbar-brand">Portfolio Website</span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav"></ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id = "aboutMe">
+            <span id="color"></span>
+            <img class = "display-photo" src = 'static/saurabh.maurya.ece20.png' alt = "saurabh.maurya.ece20.png" id="profile_pic">
+            <img id='paint-brush' src = 'static/paint-brush.png' alt='paint-brush' onclick = "changeVisibility();">
+            <div id = "name"></div>
+            <div id = "intro"></div>
+        </div>
+
+        <div id = "toolsAndTech">
+            <div class = "tools-and-technologies">Tools and Technologies:</div>
+            <div class = "web-technologies"></div>
+        </div>
+
+        <div id="myProjects">
+            <div class = "tools-and-technologies" style = "margin-bottom:2vh;">My Projects:</div>
+            <div class="row projects-row"></div>
+        </div>
+
+        <div id="connect">
+            <div class = "tools-and-technologies">Connect me through:</div>
+            <section class="section contactsection"></section>
+        </div>
+
+        <div id = "otherWorks">
+            <div class = "tools-and-technologies" style = "font-size:5vmin; margin-top:10vmin;">My other works:</div>
+            <div class = "tools-and-technologies" style="cursor:pointer; font-size:5vmin; font-weight:420;">&bull; Poem 
+                <a href = "static/Poem.pdf" target = "_new"><img style = "width:5vmin;" src = "static/pdf.png"></a>
             </div>
         </div>
-    </nav>
-    
 
-    <div id = "aboutMe">
-        <span id="color">
-            <span class = "colorRepresentation" onclick = "changeColor('red');"></span>
-            <span class = "colorRepresentation" onclick = "changeColor('black');"></span>
-            <span class = "colorRepresentation" onclick = "changeColor('blue');"></span>
-            <span class = "colorRepresentation" onclick = "changeColor('yellow');"></span>
-            <span class = "colorRepresentation" onclick = "changeColor('orange');"></span>
-            <span class = "colorRepresentation" onclick = "changeColor('pink');"></span>
-        </span>
-        <!--<img id = "cover-photo" src = 'static/coverPhoto.png' alt = "coverPhoto.png" '></img>-->
-        <img class = "display-photo" src = 'static/saurabh.maurya.ece20.png' alt = "saurabh.maurya.ece20.png" id="profile_pic">
-        <img id='paint-brush' src = 'static/paint-brush.png' alt='paint-brush' onclick = "changeVisibility();">
-        <div id = "name"></div>
-        <div id = "intro"></div>
-    </div>
+        <footer>
+            <p class="text-footer" style="float:bottom;">
+                Copyright &copy; 2022 - www.srbmaury.com - All rights reserved
+            </p>
+        </footer>
 
-    <div id = "toolsAndTech">
-        <div class = "tools-and-technologies">Tools and Technologies:</div>
-        <div class = "web-technologies">
-            <img class = "tech" src="static/HTML.png" alt="HTML">
-            <img class = "tech" src="static/CSS.png" alt="CSS">
-            <img class = "tech" src="static/JS.jpg" alt="JS">
-            <img class = "tech" src="static/reactJS.png" alt="ReactJS">
-            <img class = "tech" src="static/django.png" alt="django">
-        </div>
-    </div>
-
-    <div id="myProjects">
-        <div class = "tools-and-technologies" style = "margin-bottom:2vh;">My Projects:</div>
-        <div class="row projects-row">
-            <div class="col-sm-3 project-items" id = "1" onmouseover = "changeVis('1')" onmouseout = "normalise()">
-                <div class="card">
-                    <div class="card-body">
-                        <img class = "projects" src="static/chatters.png" alt="chatters">
-                        <h5 class="card-title">Chatters</h5>
-                        <p class="card-text">A social site using django with user authentication and basic CRUD operations.</p>
-                        <a href="http://srbmaury.pythonanywhere.com/login/?next=/" class="btn btn-primary" target = "_new">Go to project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 project-items" id = "2" onmouseover = "changeVis('2')" onmouseout = "normalise()">
-                <div class="card">
-                    <div class="card-body">
-                        <img class = "projects" src="static/website.png" alt="website">
-                        <h5 class="card-title">Portfolio Website</h5>
-                        <p class="card-text">First website which I made using HTML, CSS and JS.</p>
-                        <a href="https://srbmaury.github.io/responsive_Website/" class="btn btn-primary" target = "_new">Go to project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 project-items" id = "3" onmouseover = "changeVis('3')" onmouseout = "normalise()">
-                <div class="card">
-                    <div class="card-body">
-                        <img class = "projects" src="static/tictactoe.png" alt="tictactoe">
-                        <h5 class="card-title">Tic Tac Toe</h5>
-                        <p class="card-text">A tic tac toe game with 1 player and 2 players mode.</p>
-                        <a href="https://srbmaury.github.io/tic-tac-toe/" class="btn btn-primary" target = "_new">Go to project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 project-items" id = "4" onmouseover = "changeVis('4')" onmouseout = "normalise()">
-                <div class="card">
-                    <div class="card-body">
-                        <img class = "projects" src="static/dictionary.png" alt="dictionary">
-                        <h5 class="card-title">Dictionary</h5>
-                        <p class="card-text">A english to hindi dictionary with 4306 words.</p>
-                        <a href="https://srbmaury.github.io/dictionary/" class="btn btn-primary" target = "_new">Go to project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 project-items" id = "5" onmouseover = "changeVis('5')" onmouseout = "normalise()">
-                <div class="card">
-                    <div class="card-body">
-                        <img class = "projects" src="static/quiz.png" alt="quiz">
-                        <h5 class="card-title">Quiz</h5>
-                        <p class="card-text">A simple 5 questions quiz to demonstrate JS functionalities.</p>
-                        <a href="https://srbmaury.github.io/quiz1/" class="btn btn-primary" target = "_new">Go to project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 project-items" id = "6" onmouseover = "changeVis('6')" onmouseout = "normalise()">
-                <div class="card">
-                    <div class="card-body">
-                        <img class = "projects" src="static/todoslist.png" alt="to-dos-list">
-                        <h5 class="card-title">To-do-list</h5>
-                        <p class="card-text">A simple to-do-list using plain javascript with add, edit and delete options.</p>
-                        <a href="https://srbmaury.github.io/To-dos-list/" class="btn btn-primary" target = "_new">Go to project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="connect">
-        <div class = "tools-and-technologies">Connect me through:</div>
-        <section class="section contactsection">
-            <a href="https://www.instagram.com/srbmaury/" target="_new">
-            <div class="thumbnail2"><img src="static/instagram.jpg" alt="image not loaded" title="instagram"></div> </a>
-            <a href="https://m.facebook.com/profile.php?id=100057795465187" target="_new">
-            <div class="thumbnail2"><img src="static/facebook.jpg" alt="image not loaded" title="facebook"></div> </a>
-            <a href="mailto:saurabh.maurya.ece20@gmail.com">
-            <div class="thumbnail2"><img src="static/gmail.jpg" alt="image not loaded" title="e-mail"></div> </a>
-            <a href="https://www.linkedin.com/in/saurabh-maurya-39b04b205" target="_new">
-            <div class="thumbnail2"><img src="static/linkedin.jpg" alt="image not loaded" title="linkedin"></div> </a>
-            <a href="https://mobile.twitter.com/SrbMaury" target="_new">
-            <div class="thumbnail2"><img src="static/twitter.jpg" alt="image not loaded" title="twitter"></div> </a>
-            <a href="https://github.com/srbmaury" target="_new">
-            <div class="thumbnail2"><img src="static/github.jpg" alt="image not loaded" title="github"></div> </a>
-            </a>
-        </section>
-    </div>
-
-    <div id = "otherWorks">
-        <div class = "tools-and-technologies" style = "font-size:5vmin; margin-top:10vmin;">My other works:</div>
-        <div class = "tools-and-technologies" style="cursor:pointer; font-size:5vmin; font-weight:420;">&bull; Poem <a href = "static/Poem.pdf" target = "_new"><img style = "width:5vmin;" src = "static/pdf.png"></a></div>
-    </div>
-    <footer>
-        <p class="text-footer" style="float:bottom;">
-            Copyright &copy; 2022 - www.srbmaury.com - All rights reserved
-        </p>
-    </footer>
-    <script src="js/script.js"></script>
-  </body>
+        <script src="js/scroll.js"></script>
+        <script src="js/colors.js"></script>
+        <script src="js/technologies.js"></script>
+        <script src="js/websites.js"></script>
+        <script src="js/contacts.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>

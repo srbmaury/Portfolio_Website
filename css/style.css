@@ -197,6 +197,10 @@ img.projects{
     margin-top: -2px;
     padding-top: 5px;
 }
+svg{
+    float: right;
+    zoom:200%;
+}
 @media only screen and (max-width: 1200px){
     .section{
         height: fit-content;
